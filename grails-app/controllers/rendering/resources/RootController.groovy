@@ -7,7 +7,13 @@ class RootController {
     }
 
     def pdf() {
-        renderPdf( template: 'index' )
+        def originalDebug = grailsApplication.config.grails.resources.debug
+        try{
+            grailsApplication.config.grails.resources.debug = true
+            renderPdf( template: 'index' )
+        }finally{
+            grailsApplication.config.grails.resources.debug = originalDebug
+        }
     }
 
 }

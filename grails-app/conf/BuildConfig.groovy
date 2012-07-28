@@ -43,6 +43,7 @@ grails.project.dependency.resolution = {
         compile ":rendering:0.4.3"
         compile ":cache-headers:1.0.4"
         runtime ":cached-resources:1.0"
+        runtime ":zipped-resources:1.0"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
